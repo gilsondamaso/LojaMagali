@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import Classes.Carro;
 import Classes.Produto;
 
 public class App {
@@ -7,7 +8,15 @@ public class App {
         
         Scanner sc = new Scanner(System.in);
         Produto p = new Produto();        
-        
+        Carro car = new Carro();
+
+        car.setId(sc.nextInt());
+        car.setModelo(sc.nextLine());
+
+
+        System.out.println("O modelo do carro escolhido é " + car.getModelo());
+
+
         System.out.println("INFORME O NOME DO PRODUTO:");
         p.nome = sc.nextLine();
         System.out.println("INFORME O VALOR DO PRODUTO");
